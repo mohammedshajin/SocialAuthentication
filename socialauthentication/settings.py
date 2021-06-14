@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'social_django',
+    
+
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,9 +80,13 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
     'social_core.backends.twitter.TwitterOAuth',
     'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
 )
+
+
+
 
 WSGI_APPLICATION = 'socialauthentication.wsgi.application'
 
@@ -152,3 +160,6 @@ LOGOUT_REDIRECT_URL='home'
 
 SOCIAL_AUTH_FACEBOOK_KEY =   # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET =   # App Secret
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY =   # App ID
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET =   # App Secret

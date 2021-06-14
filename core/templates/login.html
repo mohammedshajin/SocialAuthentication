@@ -24,11 +24,17 @@
                         {{ form.as_p }}
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </form>
-
-                    <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'images/facebook.png' %}" height="35px" width="auto" style="display: block;
+                    <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.png' %}"  style="display: block;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                                width: 50%;"></a>
+                    <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'images/facebook.png' %}" height="40px" width="auto" style="display: block;
                         margin-left: auto;
                         margin-right: auto;
                         width: 50%;"></a>
+                        
+
+                        
 
                     <br>
                     Don't have an account?

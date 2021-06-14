@@ -1,198 +1,806 @@
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-
 {% load static %}
-<!DOCTYPE HTML>
-	<head>
-		<title>Traveling Website Template | Home :: W3layouts</title>
-		<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="all">	
-		<link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-		<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="{% static 'css/responsiveslides.css' %}">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script src="{% static 'js/responsiveslides.min.js' %}"></script>
-		  <script>
-		    // You can also use "$(window).load(function() {"
-			    $(function () {
-			      // Slideshow 1
-			      $("#slider1").responsiveSlides({
-			        maxwidth: 2500,
-			        speed: 600
-			      });
-			});
-		  </script>
-		</head>
-	<body>
-		<!---start-wrap---->
-			<!---start-header---->
-			<div class="header">
-				<div class="wrap">
-				<!---start-logo---->
-				<div class="logo">
-					<a href="#"><img src="{% static 'images/logo.png' %}" title="logo" /></a>
-				</div>
-				<!---End-logo---->
-				<!---start-top-nav---->
-				<div class="top-nav">
-					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="services.html">Services</a></li>
-						<li><a href="plans.html">plans</a></li>
-						<li><a href="{% url 'logout' %}">Logout</a></li>
-					</ul>
-					<p>Hi {{ user.username }}!</p>
-				</div>
-				<div class="clear"> </div>
-				<!---End-top-nav---->
-			</div>
-			<!---End-header---->
-		</div>
-		<!--start-image-slider---->
-					<div class="image-slider">
-						<!-- Slideshow 1 -->
-					    <ul class="rslides" id="slider1">
-					      <li>
-					      	<img src="{% static 'images/slider1.jpg' %}" alt="">
-					      	<div class="slider-info">
-					      		<p>Traveling the best Traveling website</p>
-					      		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
-					      		<a href="#">ReadMore</a>
-					      	</div>
-					      </li>
-					      <li><img src="{% static 'images/slider2.jpg' %}" alt="">
-					      	<div class="slider-info">
-					      		<p>Traveling the best Traveling website</p>
-					      		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
-					      		<a href="#">ReadMore</a>
-					      	</div>
-					      </li>
-					      <li><img src="{% static 'images/slider3.jpg' %}" alt="">
-					      	<div class="slider-info">
-					      		<p>Traveling the best Traveling website</p>
-					      		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
-					      		<a href="#">ReadMore</a>
-					      	</div>
-					      </li>
-					    </ul>
-						 <!-- Slideshow 2 -->
-					</div>
-			<!--End-image-slider---->
-		<!---End-wrap---->
-		<div class="clear"> </div>
-		<!---start-content---->
-		<div class="content">
-			<div class="wrap">
-			<div class="content-grids">
-				<div class="grid">
-					<a href="#"><img src="{% static 'images/grids-img1.jpg' %}" title="image-name" /></a>
-					<h3>DESTINATIONS</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-					<a class="button" href="#">More</a>
-				</div>
-				<div class="grid">
-					<a href="#"><img src="{% static 'images/grids-img2.jpg' %}" title="image-name" /></a>
-					<h3>NEWS & EVENTS</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-					<a class="button" href="#">More</a>
-				</div>
-				<div class="grid last-grid">
-					<a href="#"><img src="{% static 'images/grids-img3.jpg' %}" title="image-name" /></a>
-					<h3>SUPPORT</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-					<a class="button" href="#">More</a>
-				</div>
-				<div class="clear"> </div>
-			</div>
-			<div class="clear"> </div>
-			<div class="specials">
-					<div class="specials-heading">
-						<h5> </h5><h3>Traveling Specials</h3><h5> </h5>
-						<div class="clear"> </div>
-					</div>
-					<div class="clear"> </div>
-					<div class="specials-grids">
-						<div class="special-grid">
-							<img src="{% static 'images/grids-img1.jpg' %}" title="image-name" />
-							<a href="#">Latest Plans</a>
-							<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+
+<!doctype html>
+<html lang="zxx">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Stroll a Travel Category Bootstrap Responsive Website Template | Home :: W3layouts</title>
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+	<!-- Template CSS -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<!-- Template CSS -->
+
+</head>
+
+<body>
+	<!-- Headers-4 block -->
+	<section class="w3l-header-4 mobile-header">
+		<div class="header-tophny">
+			<div class="container-fluid">
+				<header class="top-headerhny">
+					<!--/nav-->
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand" href="index.html">
+							Str<span class="fa fa-globe" aria-hidden="true"></span>ll</a>
+						<!-- if logo is image enable this   
+                    <a class="navbar-brand" href="#index.html">
+                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                    </a> -->
+						<button class="navbar-toggler" type="button" data-toggle="collapse"
+							data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item active">
+									<a class="nav-link" href="index.html">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="about.html">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="services.html">Destinations</a>
+								</li>
+
+
+
+								<li class="nav-item">
+									<a class="nav-link" href="contact.html">Contact</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'logout' %}">Logout</a>
+								</li>
+							</ul>
+
 						</div>
-						<div class="special-grid">
-							<img src="{% static 'images/grids-img2.jpg' %}" title="image-name" />
-							<a href="#">Pre Plans</a>
-							<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+
+
+					</nav>
+					<!--//nav-->
+				</header>
+			</div>
+		</div>
+	</section>
+
+	<!-- Headers-4 block -->
+	<!--banner-slider-->
+	<section class="w3l-banner-slider-main">
+		<div class="banner-content">
+			<div id="owl-demo2" class="owl-carousel owl-theme">
+				<!--/slide1-->
+				<div class="item">
+					<div class="top-bannerhny-content">
+						<div class="top-bannerhny-left">
+							<div class="banner-innf">
+								<h6 class="hny-sub">Mountain Holiday</h6>
+								<h3>Explore your Travel <span>Destinations</span></h3>
+								<p>Enjoy the Best Destinations with Our Travel Agency</p>
+								<div class="button-6">
+									<div class="eff-6"></div>
+									<a href="about.html">Read More </a>
+								</div>
+							</div>
 						</div>
-						<div class="special-grid spe-grid">
-							<img src="{% static 'images/grids-img3.jpg' %}" title="image-name" />
-							<a href="#">Free Plans</a>
-							<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+						<div class="top-bannerhny-right">
+
 						</div>
-						<div class="clear"> </div>
 					</div>
-					<div class="clear"> </div>
+				</div>
+				<!--//slide1-->
+				<!--/slide1-->
+				<div class="item">
+					<div class="top-bannerhny-content">
+						<div class="top-bannerhny-left">
+							<div class="banner-innf">
+								<h6 class="hny-sub">Mountain Holiday</h6>
+								<h3>Enjoy your Dream <span>Vacation</span></h3>
+								<p>Enjoy the Best Destinations with Our Travel Agency</p>
+								<div class="button-6">
+									<div class="eff-6"></div>
+									<a href="about.html">Read More </a>
+								</div>
+							</div>
+						</div>
+						<div class="top-bannerhny-right one">
+
+						</div>
+					</div>
+				</div>
+				<!--//slide1-->
+				<!--/slide1-->
+				<div class="item">
+					<div class="top-bannerhny-content">
+						<div class="top-bannerhny-left">
+							<div class="banner-innf">
+								<h6 class="hny-sub">Balloon Flights</h6>
+								<h3>Enjoy your Dream <span>Vacation</span></h3>
+								<p>Let's Enjoy The Wonders of Nature</p>
+								<div class="button-6">
+									<div class="eff-6"></div>
+									<a href="about.html">Read More </a>
+								</div>
+							</div>
+						</div>
+						<div class="top-bannerhny-right two">
+
+						</div>
+					</div>
+				</div>
+				<!--//slide1-->
+				<!--/slide1-->
+				<div class="item">
+					<div class="top-bannerhny-content">
+						<div class="top-bannerhny-left">
+							<div class="banner-innf">
+								<h6 class="hny-sub">Mountain Holiday</h6>
+
+								<h3>Explore your Travel <span>Destinations</span></h3>
+								<p>Let's Enjoy The Wonders of Nature</p>
+								<div class="button-6">
+									<div class="eff-6"></div>
+									<a href="about.html">Read More </a>
+								</div>
+							</div>
+						</div>
+						<div class="top-bannerhny-right three">
+
+						</div>
+					</div>
+				</div>
+				<!--//slide1-->
+
 			</div>
-			</div>	
-			<div class="clear"> </div>
-			<div class="testmonials">
-				<div class="wrap">
-					<div class="testmonial-grid">
-						<h3>TESTIMONIALS :</h3>
-						<p>&#34; Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat luctus eros ac placerat. Quisque erat metus, facilisis non felis eu, aliquam hendrrit quam. Donec ut lectus vel dolor adipiscing tincidunt. Ut auctor diam at est iaculis, vitae interdum magna sagittis.&#34;</p>
-						<a href="#"> - Lorem ipsum</a>
+		</div>
+	</section>
+	<!-- //banner-slider-->
+	<section class="w3l-bottom-grids-6">
+		<div class="bottom-grids-info py-5">
+			<div class="container py-lg-5">
+				<div class="row bottomnhy-grids">
+					<div class="col-lg-3 col-md-6 about-gd mt-lg-0 mt-3">
+						<div class="about-gd-inn">
+							<span class="fa fa-globe icon-fea1" aria-hidden="true"></span>
+							<h5><a href="about.html">Voyages & Cruises</a></h5>
+							<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
+
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 about-gd mt-lg-0 mt-3">
+						<div class="about-gd-inn">
+							<span class="fa fa-hotel icon-fea1" aria-hidden="true"></span>
+							<h5><a href="about.html">Hotel Bookings</a></h5>
+							<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere .</p>
+
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 about-gd mt-lg-0 mt-3">
+						<div class="about-gd-inn">
+							<span class="fa fa-plane icon-fea1" aria-hidden="true"></span>
+							<h5><a href="about.html">Air Tickets</a></h5>
+							<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
+
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 about-gd mt-lg-0 mt-3">
+						<div class="about-gd-inn">
+							<span class="fa fa-file-text-o icon-fea1" aria-hidden="true"></span>
+							<h5><a href="about.html">Visas</a></h5>
+							<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
+
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!---End-content---->
-		<div class="clear"> </div>
-		<!---start-footer---->
-		<div class="footer">
-			<div class="wrap">
-			<div class="footer-grids">
-				<div class="footer-grid">
-					<h3>EXTRAS</h3>
-					<p>Ut rutrum neque a mollis laoreet diam enim feuiat dui nec ulacoper quam felis id diam. Nunc ut tortor ligula eu petiu risus. Pelleesque conquat dignissim lacus quis altrcies.</p>
+	</section>
+	<section class="w3l-gallery-6">
+		<!--/gallery-->
+		<div class="gallery-content-6 py-5">
+			<div class="container py-lg-5">
+				<div class="title-content mb-lg-5 mb-4">
+					<span class="sub-title">Hot Tours</span>
+					<h3 class="hny-title">Popular Packages</h3>
 				</div>
-				<div class="footer-grid">
-					<h3>RECENT POSTS</h3>
-					<ul>
-						<li><a href="#">Vestibulum felis</a></li>
-						<li><a href="#">Mauris at tellus</a></li>
-						<li><a href="#">Donec ut lectus</a></li>
-						<li><a href="#">vitae interdum</a></li>
-					</ul>
-				</div>
-				<div class="footer-grid">
-					<h3>USEFUL INFO</h3>
-					<ul>
-						<li><a href="#">Hendrerit quam</a></li>
-						<li><a href="#">Amet consectetur </a></li>
-						<li><a href="#">Iquam hendrerit</a></li>
-						<li><a href="#">Donec ut lectus </a></li>
-					</ul>
-				</div>
-				<div class="footer-grid footer-lastgrid">
-					<h3>CONTACT US</h3>
-					<p>Pelleesque conquat dignissim lacus quis altrcies.</p>
-					<div class="footer-grid-address">
-						<p>Tel.800-255-9999</p>
-						<p>Fax: 1234 568</p>
-						<p>Email:<a class="email-link" href="mailto:@example.com">Eaxmplesite@Demo.com</a></p>
+				<div class="row gallery-grids">
+					<div class="col-lg-4 col-md-6 content-left-sec gal-slide-grid">
+						<div class="gal-slide-img">
+							<a href="#"><img src="{% static 'images/g1.jpg' %}" class="img img-fluid" alt=""></a>
+						</div>
+						<div class="gal-slide-info">
+
+							<a href="#">
+								<h4 class="mt-4 mb-0">Paris</h4>
+							</a>
+							<h6 class="mt-sm-2 mt-1">3Days, 4 Nights Start From <span>$750</span></h6>
+
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 content-left-sec gal-slide-grid">
+						<div class="gal-slide-img">
+							<a href="#"><img src="{% static 'images/g2.jpg' %}" class="img img-fluid" alt=""></a>
+						</div>
+						<div class="gal-slide-info">
+
+							<a href="#">
+								<h4 class="mt-4 mb-0">Bankok</h4>
+							</a>
+							<h6 class="mt-sm-2 mt-1">2Days, 3 Nights Start From <span>$650</span></h6>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 content-left-sec gal-slide-grid">
+						<div class="gal-slide-img">
+							<a href="#"><img src="{% static 'images/g3.jpg' %}" class="img img-fluid" alt=""></a>
+						</div>
+						<div class="gal-slide-info">
+
+							<a href="#">
+								<h4 class="mt-4 mb-0">Maldives</h4>
+							</a>
+							<h6 class="mt-sm-2 mt-1">2Days, 3 Nights Start From <span>$550</span></h6>
+
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 content-left-sec gal-slide-grid">
+						<div class="gal-slide-img">
+							<a href="#"><img src="{% static 'images/g4.jpg' %}" class="img img-fluid" alt=""></a>
+						</div>
+						<div class="gal-slide-info">
+
+							<a href="#">
+								<h4 class="mt-4 mb-0">Greece</h4>
+							</a>
+							<h6 class="mt-sm-2 mt-1">3Days, 4 Nights Start From <span>$950</span></h6>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 content-left-sec gal-slide-grid">
+						<div class="gal-slide-img">
+							<a href="#"><img src="{% static 'images/g5.jpg' %}" class="img img-fluid" alt=""></a>
+						</div>
+						<div class="gal-slide-info">
+
+							<a href="#">
+								<h4 class="mt-4 mb-0">London</h4>
+							</a>
+							<h6 class="mt-sm-2 mt-1">2Days, 3 Nights Start From <span>$550</span></h6>
+
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 content-left-sec gal-slide-grid">
+						<div class="gal-slide-img">
+							<a href="#"><img src="{% static 'images/g6.jpg' %}" class="img img-fluid" alt=""></a>
+						</div>
+						<div class="gal-slide-info">
+
+							<a href="#">
+								<h4 class="mt-4 mb-0">Julian Alps</h4>
+							</a>
+							<h6 class="mt-sm-2 mt-1">3Days, 4 Nights Start From <span>$850</span></h6>
+						</div>
 					</div>
 				</div>
-				<div class="clear"> </div>
-			</div>
 			</div>
 		</div>
-		<!---End-footer---->
-		<div class="clear"> </div>
-		<div class="copy-right">
-			<p> &copy; 2013 Traveling. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+		<!--//gallery-->
+
+	</section>
+	<section class="w3l-content-with-photo-6">
+		<div class="contente-photo-hny-info py-5">
+			<div class="container py-lg-5">
+				<div class="content-photo">
+					<!--popup-->
+					<a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
+						<span class="video-play-icon">
+							<span class="fa fa-play"></span>
+						</span>
+					</a>
+
+					<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+					<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+						<iframe src="https://player.vimeo.com/video/92605278" frameborder="0"
+							allow="autoplay; fullscreen" allowfullscreen></iframe>
+					</div>
+					<!--//popup-->
+				</div>
+				<div class="content-photo-content">
+					<div class="content-photo-content-left">
+						<span class="sub-title">Short Video</span>
+						<h3 class="hny-title">Find Your Perfect Vacation</h3>
+					</div>
+
+					<div class="content-photo-content-right">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic odio voluptatem
+							tenetur
+							consequatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic odio
+							voluptatem tenetur
+							consequatur adipisicing elit.</p>
+					</div>
+				</div>
+
+
+				<div class="booking-form-content">
+					<span class="sub-title">10-30% Off</span>
+					<h3 class="hny-title">Book Now</h3>
+					<form action="search-results.html" method="post" class="booking-form">
+						<div class="row book-form">
+							<div class="form-input col-md-4 mt-3">
+								<label>Name</label>
+								<input type="text" name="" placeholder="Name" required="">
+							</div>
+							<div class="form-input col-md-4 mt-3">
+								<label>Destination</label>
+								<select name="selectpicker" class="selectpicker">
+									<option value="">Any</option>
+									<option value="africa">Africa</option>
+									<option value="america">America</option>
+									<option value="asia">Asia</option>
+									<option value="eastern-europe">Eastern Europe</option>
+									<option value="europe">Europe</option>
+									<option value="south-america">South America</option>
+								</select>
+
+							</div>
+							<div class="form-input col-md-4  mt-3">
+								<label>Activity</label>
+								<select name="activity" class="selectpicker">
+									<option value="">Any</option>
+									<option value="city-tours">City Tours</option>
+									<option value="cultural-thematic-tours">Cultural &amp; Thematic Tours</option>
+									<option value="family-friendly-tours">Family Friendly Tours</option>
+									<option value="holiday-seasonal-tours">Holiday &amp; Seasonal Tours</option>
+									<option value="indulgence-luxury-tours">Indulgence &amp; Luxury Tours</option>
+									<option value="outdoor-activites">Outdoor Activites</option>
+									<option value="relaxation-tours">Relaxation Tours</option>
+									<option value="wild-adventure-tours">Wild &amp; Adventure Tours</option>
+								</select>
+
+							</div>
+							<div class="form-input col-md-4 mt-3">
+
+								<label>Duration</label>
+								<select name="duration" class="selectpicker">
+									<option value="">Any</option>
+									<option value="1">1 Day Tour</option>
+									<option value="2">2-4 Days Tour</option>
+									<option value="5">5-7 Days Tour</option>
+									<option value="7">7+ Days Tour</option>
+								</select>
+
+							</div>
+							<div class="form-input col-md-4 mt-3">
+								<label>Date</label>
+								<input type="date" name="" placeholder="Date" required="">
+							</div>
+							<div class="bottom-btn col-md-4 mt-3">
+								<label>Submit</label>
+								<button class="btn btn-style btn-primary w-100">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
-	</body>
+		</div>
+	</section>
+	<section class="w3l-newsletter">
+		<!-- /form-25-section -->
+		<div class="form-25-mian py-5">
+			<div class="container py-lg-5">
+				<div class="forms-25-info">
+					<span class="sub-title-1">Lets Stay In Touch</span>
+					<h3 class="hny-title two">Sign Up for 25% Discount</h3>
+					<p>Want to get an instant discount for your next tour? Leave your email and sign up for our
+						newsletter with 25% off all our offers.</p>
+
+					<form action="#" method="post" class="signin-form mt-4 mb-2">
+						<div class="forms-gds">
+
+							<input type="email" name="" placeholder="Email" required />
+
+							<button class="btn">Submit</button>
+						</div>
+						<p class="action-link">Subscribe to our free weekly newsletter for new update releases (no
+							spam)</p>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //form-25-section -->
+	<section class="w3l-companies-hny-6">
+		<!-- /grids -->
+		<div class="cusrtomer-layout py-5">
+			<div class="container pt-lg-5">
+				<div class="title-content mb-lg-5 mb-4">
+					<span class="sub-title">Testimonials</span>
+					<h3 class="hny-title">Feedback from our Customers</h3>
+				</div>
+				<!-- /grids -->
+				<div id="owl-demo1" class="owl-carousel owl-theme">
+					<div class="item">
+						<div class="testimonial-content">
+							<div class="testimonial">
+								<blockquote>
+									<div class="icon-quote"><span class="fa fa-quote-left" aria-hidden="true"></span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.</p>
+								</blockquote>
+								<div class="testi-des">
+									<div class="test-img"><img src="{% static 'images/t1.jpg' %}" class="img-fluid" alt="/">
+									</div>
+									<div class="peopl">
+										<h3>Theo Hall</h3>
+										<p class="indentity">SEO Expert</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testimonial-content">
+							<div class="testimonial">
+								<blockquote>
+									<div class="icon-quote"><span class="fa fa-quote-left" aria-hidden="true"></span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.</p>
+								</blockquote>
+
+								<div class="testi-des">
+									<div class="test-img"><img src="{% static 'images/t2.jpg' %}" class="img-fluid" alt="/">
+									</div>
+									<div class="peopl">
+										<h3>Jenna Johnson</h3>
+										<p class="indentity">SEO Expert</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testimonial-content">
+							<div class="testimonial">
+								<blockquote>
+									<div class="icon-quote"><span class="fa fa-quote-left" aria-hidden="true"></span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.</p>
+
+								</blockquote>
+
+								<div class="testi-des">
+									<div class="test-img"><img src="{% static 'images/t3.jpg' %}" class="img-fluid" alt="/">
+									</div>
+									<div class="peopl">
+										<h3>Linda Carini</h3>
+										<p class="indentity">SEO Expert</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testimonial-content">
+							<div class="testimonial">
+								<blockquote>
+									<div class="icon-quote"><span class="fa fa-quote-left" aria-hidden="true"></span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.</p>
+
+								</blockquote>
+								<div class="testi-des">
+									<div class="test-img"><img src="{% static 'images/t4.jpg' %}" class="img-fluid" alt="/">
+									</div>
+									<div class="peopl">
+										<h3>Mike Johnson</h3>
+										<p class="indentity">SEO Expert</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testimonial-content">
+							<div class="testimonial">
+								<blockquote>
+									<div class="icon-quote"><span class="fa fa-quote-left" aria-hidden="true"></span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.</p>
+
+								</blockquote>
+								<div class="testi-des">
+									<div class="test-img"><img src="{% static 'images/t5.jpg' %}" class="img-fluid" alt="/">
+									</div>
+									<div class="peopl">
+										<h3>Theo Hall</h3>
+										<p class="indentity">SEO Expert</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testimonial-content">
+							<div class="testimonial">
+								<blockquote>
+									<div class="icon-quote"><span class="fa fa-quote-left" aria-hidden="true"></span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.</p>
+
+								</blockquote>
+
+								<div class="testi-des">
+									<div class="test-img"><img src="{% static 'images/t6.jpg' %}" class="img-fluid" alt="/">
+									</div>
+									<div class="peopl">
+										<h3>Jenna Johnson</h3>
+										<p class="indentity">SEO Expert</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /grids -->
+
+
+		</div>
+		</div>
+		<!-- //grids -->
+	</section>
+
+	<!-- footer-66 -->
+	<footer class="w3l-footer-66">
+		<section class="footer-inner-main">
+			<div class="footer-hny-grids py-5">
+				<div class="container py-lg-4">
+					<div class="text-txt">
+						<div class="right-side">
+							<div class="row sub-columns">
+								<div class="col-lg-4 col-md-6 sub-one-left pr-lg-4">
+									<h2><a class="navbar-brand" href="index.html">
+											Str<span class="fa fa-globe" aria-hidden="true"></span>ll</a></h2>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic odio
+										voluptatem tenetur consequatur.Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. </p>
+									<div class="columns-2">
+										<ul class="social">
+											<li><a href="#facebook"><span class="fa fa-facebook"
+														aria-hidden="true"></span></a>
+											</li>
+											<li><a href="#linkedin"><span class="fa fa-linkedin"
+														aria-hidden="true"></span></a>
+											</li>
+											<li><a href="#twitter"><span class="fa fa-twitter"
+														aria-hidden="true"></span></a>
+											</li>
+											<li><a href="#google"><span class="fa fa-google-plus"
+														aria-hidden="true"></span></a>
+											</li>
+											<li><a href="#github"><span class="fa fa-github"
+														aria-hidden="true"></span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 sub-one-left mid-footer-gd">
+									<div class="sub-two-right">
+										<h6>Quick links</h6>
+										<ul>
+											<li><a href="index.html"><span
+														class="fa fa-angle-double-right mr-2"></span>Home</a>
+											</li>
+											<li><a href="about.html"><span
+														class="fa fa-angle-double-right mr-2"></span>About</a>
+											</li>
+											<li><a href="services.html"><span
+														class="fa fa-angle-double-right mr-2"></span>Destinations</a>
+											</li>
+											<li><a href="contact.html"><span
+														class="fa fa-angle-double-right mr-2"></span>Contact</a></li>
+										</ul>
+									</div>
+									<div class="sub-two-right">
+										<h6>Help & Support</h6>
+										<ul>
+											<li><a href="index.html"><span
+														class="fa fa-angle-double-right mr-2"></span>Live
+													Chart</a></li>
+											<li><a href="faq.html"><span
+														class="fa fa-angle-double-right mr-2"></span>Faq</a>
+											</li>
+											<li><a href="#support"><span
+														class="fa fa-angle-double-right mr-2"></span>Support</a></li>
+											<li><a href="#terms"><span
+														class="fa fa-angle-double-right mr-2"></span>Terms
+													of Services</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 sub-one-left">
+									<h6>Instagram Gallery </h6>
+									<div class="column2 instagram-feeds">
+										<div class="b-img"> <a href="#"><img src="{% static 'images/g1.jpg' %}"
+													class="img-fluid" alt=""></a></div>
+										<div class="b-img"> <a href="#"><img src="{% static 'images/g2.jpg' %}"
+													class="img-fluid" alt=""></a></div>
+										<div class="b-img"> <a href="#"><img src="{% static 'images/g3.jpg' %}"
+													class="img-fluid" alt=""></a></div>
+										<div class="b-img"> <a href="#"><img src="{% static 'images/g4.jpg' %}"
+													class="img-fluid" alt=""></a></div>
+										<div class="b-img"> <a href="#"><img src="{% static 'images/g5.jpg' %}"
+													class="img-fluid" alt=""></a></div>
+										<div class="b-img"> <a href="#"><img src="{% static 'images/g6.jpg' %}"
+													class="img-fluid" alt=""></a></div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="below-section">
+				<div class="container">
+					<div class="copyright-footer">
+						<div class="columns text-lg-left">
+							<p>© 2020 Stroll. All rights reserved. Design by <a href="https://w3layouts.com/"
+									target="_blank"> W3Layouts</a>
+							</p>
+						</div>
+						<ul class="columns text-lg-right">
+							<li><a href="#">Privacy Policy</a>
+							</li>
+							<li><a href="about.html">About Us</a>
+							</li>
+							<li><a href="contact.html">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- copyright -->
+			<!-- move top -->
+			<button onclick="topFunction()" id="movetop" title="Go to top">
+				<span class="fa fa-arrow-up" aria-hidden="true"></span>
+			</button>
+			<script>
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function () {
+					scrollFunction()
+				};
+
+				function scrollFunction() {
+					if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+						document.getElementById("movetop").style.display = "block";
+					} else {
+						document.getElementById("movetop").style.display = "none";
+					}
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
+				}
+			</script>
+			<!-- /move top -->
+
+		</section>
+	</footer>
+	<!--//footer-66 -->
+</body>
+
 </html>
 
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--//-->
+<script>
+	$(function () {
+		$('.navbar-toggler').click(function () {
+			$('body').toggleClass('noscroll');
+		})
+	});
+</script>
+<!--/scroll-down-JS-->
+<!--pop-up-box-->
+
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script>
+	$(document).ready(function () {
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+
+			fixedContentPos: false,
+			fixedBgPos: true,
+
+			overflowY: 'auto',
+
+			closeBtnInside: true,
+			preloader: false,
+
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+
+		$('.popup-with-move-anim').magnificPopup({
+			type: 'inline',
+
+			fixedContentPos: false,
+			fixedBgPos: true,
+
+			overflowY: 'auto',
+
+			closeBtnInside: true,
+			preloader: false,
+
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-slide-bottom'
+		});
+	});
+</script>
+
+<!--//pop-up-box-->
+<!-- for blog carousel slider -->
+<script src="{% static 'js/owl.carousel1.js' %}"></script>
+<script>
+	$(document).ready(function () {
+		$("#owl-demo2").owlCarousel({
+			items: 1,
+			lazyLoad: true,
+			autoPlay: true,
+			navigation: false,
+			navigationText: ["", ""],
+			rewindNav: false,
+			scrollPerPage: true,
+			pagination: false,
+			paginationNumbers: false,
+
+		})
+	});
+	$(document).ready(function () {
+		$("#owl-demo1").owlCarousel({
+			loop: true,
+			margin: 20,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 1,
+					nav: true
+				},
+				600: {
+					items: 2,
+					nav: false
+				},
+				1000: {
+					items: 3,
+					nav: true,
+					loop: false
+				}
+			}
+		})
+	})
+</script>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
